@@ -10,3 +10,7 @@ gcc -Wall -g main.c decode.o read_png.o print_png.o -o main -I/home/freedomsky/c
 
 Run:
 ./main filename.png
+
+Tests:
+./main imgs/small.png
+./main imgs/big.png
