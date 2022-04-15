@@ -106,14 +106,8 @@ int print_png(unsigned char *decode_res, unsigned long decode_length, struct png
 {
 	int line_length, pos = 0;
 	unsigned char *pxs_last;
-	int chars_len = 32;
-	char chars[chars_len];
-	int chi;
-
-
-	for(chi = 33; chi < 65; chi++) {
-		chars[chi-33] = chi;
-	}
+	char chars[] = {32, 46, 39, 96, 44, 34, 94, 42, 58, 59, 45, 126, 43, 124, 47, 92, 40, 41, 33, 93, 91, 60, 123, 125, 62, 61, 63, 37, 38, 36, 64, 35};
+	int chars_len = sizeof(chars);
 
 	line_length = inf->width * 4 + 1;
 
